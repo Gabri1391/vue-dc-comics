@@ -88,14 +88,13 @@
 
 <style lang="scss" scoped>
  header{
-    padding-top: 30px;
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
  }
 
 img{
+    width: 80px;
     padding-right: 30px;
 }
 
@@ -103,7 +102,7 @@ img{
     display: flex;
     justify-content: center;
     padding-right: 120px;
-    margin: 20px;
+    margin: 10px;
  }
 
  li{
