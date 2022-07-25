@@ -4,16 +4,7 @@
                 <div class="col">
                 <ul>
                     <h3>DC Comics</h3>
-                    <li><a href="#">Characthers</a></li>
-                    <li><a class="active" href="#">Comics</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Collectibles</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">Fans</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li v-for="link in links" :key="link.id"><a :href="link.url">{{link.text}}</a></li>
                 </ul>
                 <ul>
                     <h3>Shop</h3>
@@ -24,23 +15,14 @@
           <div class="col">
           <ul>
             <h3>DC</h3>
-            <li><a href="#">Characthers</a></li>
-            <li><a class="active" href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Collectibles</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Fans</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Shop</a></li>
+            <li v-for="link in links" :key="link.id"><a :href="link.url">{{link.text}}</a></li>
           </ul>
         </div>
         <div class="col">
           <ul>
             <h3>Sites</h3>
             <li><a href="#">Characthers</a></li>
-            <li><a class="active" href="#">Comics</a></li>
+            <li><a href="#">Comics</a></li>
             <li><a href="#">Movies</a></li>
             <li><a href="#">TV</a></li>
             <li><a href="#">Games</a></li>
@@ -54,7 +36,73 @@
 
 <script>
  export default {
-    name: 'TheFooter'
+    name: 'TheFooter',
+     data(){
+        return{
+            links:[
+  {
+    id:1,
+    text: 'Characters',
+    url: '#',
+    current: false,
+  },
+  {
+    id:2,
+    text: 'Comics',
+    url: '#',
+    current: true,
+  },
+  {
+    id:3,
+    text: 'Movies',
+    url: '#',
+    current: false,
+  },
+  {
+    id:4,
+    text: 'TV',
+    url: '#',
+    current: false,
+  },
+  {
+    id:5,
+    text: 'Games',
+    url: '#',
+    current: false,
+  },
+  {
+    id:6,
+    text: 'Collectibles',
+    url: '#',
+    current: false,
+  },
+  {
+    id:7,
+    text: 'Videos',
+    url: '#',
+    current: false,
+  },
+  {
+    id:8,
+    text: 'Fans',
+    url: '#',
+    current: false,
+  },
+  {
+    id:9,
+    text: 'News',
+    url: '#',
+    current: false,
+  },
+  {
+    id:10,
+    text: 'Shop',
+    url: '#',
+    current: false,
+  },
+]
+        }
+    }
 
 }
 </script>
