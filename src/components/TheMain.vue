@@ -4,24 +4,19 @@
         </section>
         <section class="banner">
             <div class="card-box">
-                <div v-for="(card,i) in cards" :key="i" class="comics-card">
-                    <figure>
-                        <a href="#">
-                          <img :src="card.thumb" :alt="card.series">
-                        </a>
-                    </figure>
-                    <figcaption>
-                    <p>{{card.series}}</p>
-                    </figcaption>
-                </div>
+                <ComicsCard v-for="(card,i) in cards" :key="i" :card="card"/>
             </div>
         </section>
     </main>
 </template>
 
 <script>
+import ComicsCard from './ComicsCard.vue'
 export default {
     name: 'TheMain',
+    components: {
+    ComicsCard,
+},
     data(){
         return{
             cards:[
@@ -120,21 +115,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
 
-     .comics-card{
-        flex-basis: calc(100% / 6 - 10px);
-        padding: 0 5px;
-
-        img{
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        figcaption{
-            color: white;
-            text-align: center;
-        }
-     }
 
    }
  }
