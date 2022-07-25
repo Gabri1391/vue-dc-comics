@@ -3,6 +3,7 @@
     <BaseHeader />
     <TheMain />
     <TheTopFooter/>
+    <BottomFooter/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import BaseHeader from "./components/BaseHeader.vue"
 import TheMain from "./components/TheMain.vue"
 import TheTopFooter from "./components/TheFooter.vue"
+import BottomFooter from "./components/BottomFooter.vue"
 
 export default {
   name: 'App',
@@ -17,7 +19,7 @@ export default {
     BaseHeader,
     TheMain,
     TheTopFooter,
-  
+    BottomFooter
 }
 
 }
